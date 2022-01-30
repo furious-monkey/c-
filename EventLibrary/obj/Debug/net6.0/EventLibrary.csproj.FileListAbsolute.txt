@@ -1,0 +1,12 @@
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/bin/Debug/net6.0/EventLibrary.deps.json
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/bin/Debug/net6.0/EventLibrary.dll
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/bin/Debug/net6.0/ref/EventLibrary.dll
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/bin/Debug/net6.0/EventLibrary.pdb
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/EventLibrary.csproj.AssemblyReference.cache
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/EventLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/EventLibrary.AssemblyInfoInputs.cache
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/EventLibrary.AssemblyInfo.cs
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/EventLibrary.csproj.CoreCompileInputs.cache
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/EventLibrary.dll
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/ref/EventLibrary.dll
+/Users/mathiscote/Prog Personnel/C#/EventSystem/EventLibrary/obj/Debug/net6.0/EventLibrary.pdb
