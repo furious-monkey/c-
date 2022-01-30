@@ -1,6 +1,5 @@
 using App.CustomEvents;
 using EventLibrary;
-using EventHandler = EventLibrary.EventHandler;
 
 namespace App;
 
@@ -8,7 +7,7 @@ public class TestClass : IEventListener
 {
     public TestClass()
     {
-        EventHandler.Instance.AddEventListener(this);
+        EventSystem.Instance.AddEventListener(this);
     }
 
     public void OnEvent(Event e)

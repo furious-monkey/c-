@@ -1,6 +1,6 @@
 namespace EventLibrary;
 
-public class EventHandler : IEventListener
+public class EventSystem
 {
     private readonly List<IEventListener> _listeners;
     
@@ -17,10 +17,12 @@ public class EventHandler : IEventListener
         _listeners.Add(listener);
     }
     
-    private EventHandler()
+    // TODO: Create removeListener function
+    
+    private EventSystem()
     {
         _listeners = new List<IEventListener>();
     }
 
-    public static EventHandler Instance { get; } = new EventHandler();
+    public static EventSystem Instance { get; } = new EventSystem();
 }

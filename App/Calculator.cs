@@ -1,6 +1,5 @@
 using App.CustomEvents;
 using EventLibrary;
-using EventHandler = EventLibrary.EventHandler;
 
 namespace App;
 
@@ -14,7 +13,7 @@ public class Calculator : IEventListener
 
     public Calculator()
     {
-        EventHandler.Instance.AddEventListener(this);
+        EventSystem.Instance.AddEventListener(this);
     }
 
     public void Start()
@@ -73,7 +72,7 @@ public class Calculator : IEventListener
             _ => null
         };
 
-        EventHandler.Instance.OnEvent(e!);
+        EventSystem.Instance.OnEvent(e!);
     }
 
     private void DisplayEquation()
