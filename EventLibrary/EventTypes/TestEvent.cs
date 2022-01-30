@@ -4,8 +4,7 @@ public class TestEvent : Event
 {
     private int _x;
     private string _name;
-    
-    
+
     public TestEvent(Type type, int x, string name) : base(type)
     {
         _x = x;
