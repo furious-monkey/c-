@@ -27,3 +27,9 @@ This is a simple Event System and Event Dispatcher written in C# with DotNetCore
 
 ### How to use the library :
 See the Calculator example in the App project. In  this example, there's a basic calculator calling and event depending on the operator selected. Once the event is fired, the calculator will be notified. The dispatcher will call the right callback depending on the event type. See the DivisionEvent to see the impact of the EventSystem class, since the DivisionEvent also calls a function in the TestClass, to show how the subscribe system allows for multiple listeners for the same event type.
+
+### Contributing : 
+Feel free to contribute if you have refactors or ideas in mind.
+
+### The future of this little library :
+I would like to add a queue system and a filter system. Though I don't think I'll comeback to this small project since school will takeover all my free time.
