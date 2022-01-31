@@ -26,10 +26,12 @@ This is a simple Event System and Event Dispatcher written in C# with DotNetCore
 - IEventListener is and interface every event listener class needs to implement.
 
 ### How to use it (See calculator example) :
-1. Create a class that will listener for events. In its constructor, make sure to subscribe it to the EventSyteme
+1. Create a class that will be listening for events.
+2. Inherit the created class with IEventListener.
+3. In its constructor, make sure to subscribe it to the EventSyteme.
 ```c#
 public Calculator()
 {
-  EventSystem.Instance.AddEventListener(this);
+    EventSystem.Instance.AddEventListener(this);
 }
 ``` 
