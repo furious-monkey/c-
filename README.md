@@ -25,13 +25,5 @@ This is a simple Event System and Event Dispatcher written in C# with DotNetCore
 - Event.cs is an abstract class every custom events needs to inherit from.
 - IEventListener is and interface every event listener class needs to implement.
 
-### How to use it (See calculator example) :
-1. Create a class that will be listening for events.
-2. Inherit the created class with IEventListener.
-3. In its constructor, make sure to subscribe it to the EventSyteme.
-```c#
-public Calculator()
-{
-    EventSystem.Instance.AddEventListener(this);
-}
-``` 
+### How to use the library :
+See the Calculator example in the App project. In  this example, there's a basic calculator calling and event depending on the operator selected. Once the event is fired, the calculator will be notified. The dispatcher will call the right callback depending on the event type. See the DivisionEvent to see the impact of the EventSystem class, since the DivisionEvent also calls a function in the TestClass, to show how the subscribe system allows for multiple listeners for the same event type.
