@@ -28,10 +28,10 @@ public class Calculator : IEventListener
     public void OnEvent(Event e)
     {
         var dispatcher = new EventDispatcher(e);
-        dispatcher.Dispatch(Event.Type.AdditionEvent, e2 => OnOperation((AdditionEvent) e2));
-        dispatcher.Dispatch(Event.Type.SoustractionEvent, e2 => OnOperation((SoustractionEvent) e2));
-        dispatcher.Dispatch(Event.Type.MultiplicationEvent, e2 => OnOperation((MultiplicationEvent) e2));
-        dispatcher.Dispatch(Event.Type.DivisionEvent, e2 => OnOperation((DivisionEvent) e2));
+        dispatcher.Dispatch(AdditionEvent.EventType, e2 => OnOperation((AdditionEvent) e2));
+        dispatcher.Dispatch(SoustractionEvent.EventType, e2 => OnOperation((SoustractionEvent) e2));
+        dispatcher.Dispatch(MultiplicationEvent.EventType, e2 => OnOperation((MultiplicationEvent) e2));
+        dispatcher.Dispatch(DivisionEvent.EventType, e2 => OnOperation((DivisionEvent) e2));
     }
 
     private bool OnOperation(OperationEvent e)
@@ -63,16 +63,19 @@ public class Calculator : IEventListener
     
     private void Calculate()
     {
-        Event? e = _operator switch
-        {
-            '+' => new AdditionEvent(_num1, _num2),
-            '-' => new SoustractionEvent(_num1, _num2),
-            '*' => new MultiplicationEvent(_num1, _num2),
-            '/' => new DivisionEvent(_num1, _num2),
-            _ => null
-        };
+        EventSystem.Instance.OnEvent(GetEvent()!);
+    }
 
-        EventSystem.Instance.OnEvent(e!);
+    private Event? GetEvent()
+    {
+        return _operator switch
+            {
+                '+' => new AdditionEvent(_num1, _num2),
+                '-' => new SoustractionEvent(_num1, _num2),
+                '*' => new MultiplicationEvent(_num1, _num2),
+                '/' => new DivisionEvent(_num1, _num2),
+                _ => null
+            };
     }
 
     private void DisplayEquation()

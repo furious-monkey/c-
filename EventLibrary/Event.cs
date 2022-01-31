@@ -2,28 +2,11 @@ namespace EventLibrary;
 
 public abstract class Event
 {
-    public enum Type
-    {
-        AdditionEvent,
-        SoustractionEvent,
-        MultiplicationEvent,
-        DivisionEvent,
-        TestEvent,
-        MouseClickEvent,
-        MouseHoldEvent,
-        MouseDragEvent
-    }
-
     public bool IsHandled;
-    private readonly Type _type;
+    public readonly string EventType;
 
-    protected Event(Type type)
+    protected Event(string eventType)
     {
-        _type = type;
-    }
-
-    public new Type GetType()
-    {
-        return _type;
+        EventType = eventType;
     }
 }

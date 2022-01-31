@@ -10,9 +10,9 @@ public class EventDispatcher
         _event = e;
     }
 
-    public void Dispatch(Event.Type type, Func<Event, bool> callback)
+    public void Dispatch(string eventType, Func<Event, bool> callback)
     {
-        if (_event.IsHandled || _event.GetType() != type)
+        if (_event.IsHandled || _event.EventType != eventType)
         {
             return;
         }

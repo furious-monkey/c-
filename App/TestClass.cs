@@ -13,10 +13,10 @@ public class TestClass : IEventListener
     public void OnEvent(Event e)
     {
         var dispatcher = new EventDispatcher(e);
-        dispatcher.Dispatch(Event.Type.DivisionEvent, e2 => OnDivision((DivisionEvent) e2));
+        dispatcher.Dispatch(DivisionEvent.EventType, e2 => OnDivision((DivisionEvent) e2));
     }
 
-    private bool OnDivision(Event e)
+    private bool OnDivision(DivisionEvent e)
     {
         Console.WriteLine();
         Console.WriteLine("- Might be a division by 0 -");

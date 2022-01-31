@@ -2,7 +2,9 @@ namespace App.CustomEvents;
 
 public class DivisionEvent : OperationEvent
 {
-    public DivisionEvent(int num1, int num2) : base(Type.DivisionEvent, num1, num2)
+    public new static string EventType => "EVENT_DIVISION_OPERATION";
+    
+    public DivisionEvent(int num1, int num2) : base(EventType, num1, num2)
     {
         
     }

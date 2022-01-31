@@ -2,8 +2,9 @@ namespace App.CustomEvents;
 
 public class SoustractionEvent : OperationEvent
 {
-    public SoustractionEvent(int num1, int num2) : 
-        base(Type.SoustractionEvent, num1, num2)
+    public new static string EventType => "EVENT_SOUSTRACTION_OPERATION";
+    
+    public SoustractionEvent(int num1, int num2) : base(EventType, num1, num2)
     {
         
     }

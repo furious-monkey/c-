@@ -7,7 +7,7 @@ public abstract class OperationEvent : Event
     protected readonly int FirstNumber;
     protected readonly int SecondNumber;
 
-    protected OperationEvent(Type type, int num1, int num2) : base(type)
+    protected OperationEvent(string eventType, int num1, int num2) : base(eventType)
     {
         FirstNumber = num1;
         SecondNumber = num2;
