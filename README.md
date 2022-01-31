@@ -1,7 +1,7 @@
 # c-sharp-event-system
 This is a simple Event System and Event Dispatcher written in C# with DotNetCore 6.0. 
 
-### Why did I build an Event System even though C# provides a built-in event system:
+### Why did I built an Event System even though C# provides a built-in event system:
 - To understand how one would work.
 - To learn C# before my OOP III class (which is in C#). 
 - As a reference for future work/game development.
